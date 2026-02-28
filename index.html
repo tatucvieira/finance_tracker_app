@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Tracker App - CLT Paycheck System</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="navbar-brand">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Finance Tracker</span>
+                </div>
+                <div class="navbar-menu" id="mainMenu">
+                    <!-- Menu will be populated by JavaScript -->
+                </div>
+                <div class="navbar-user">
+                    <div class="user-info">
+                        <i class="fas fa-user-circle"></i>
+                        <span id="username">User</span>
+                    </div>
+                    <button class="btn-logout" id="logoutBtn">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="container">
+                <div id="contentArea">
+                    <!-- Content will be loaded dynamically -->
+                    <div class="welcome-section">
+                        <h1>Welcome to Finance Tracker</h1>
+                        <p>Manage your finances and track your CLT-compliant paycheck calculations</p>
+                        <div class="welcome-cards">
+                            <div class="card">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <h3>Track Income</h3>
+                                <p>Monitor your earnings and paycheck details</p>
+                            </div>
+                            <div class="card">
+                                <i class="fas fa-calculator"></i>
+                                <h3>CLT Calculations</h3>
+                                <p>Calculate net salary with Brazilian tax compliance</p>
+                            </div>
+                            <div class="card">
+                                <i class="fas fa-chart-pie"></i>
+                                <h3>Financial Insights</h3>
+                                <p>Get detailed reports and analytics</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Modals -->
+        <div id="modalsContainer"></div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>Finance Tracker App &copy; 2024 | CLT Paycheck System Integration</p>
+                <p class="footer-links">
+                    <a href="#" id="helpLink">Help</a> | 
+                    <a href="#" id="aboutLink">About</a> | 
+                    <a href="#" id="privacyLink">Privacy</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/config/cltConstants.js"></script>
+    <script src="js/config/complianceRules.js"></script>
+    <script src="js/models/paycheckTemplate.js"></script>
+    <script src="js/models/paycheckRecord.js"></script>
+    <script src="js/models/transaction.js"></script>
+    <script src="js/models/user.js"></script>
+    <script src="js/services/cltCalculator.js"></script>
+    <script src="js/services/complianceValidator.js"></script>
+    <script src="js/services/dataService.js"></script>
+    <script src="js/components/Navigation/MainMenu.js"></script>
+    <script src="js/components/forms/CLTSalaryInput.js"></script>
+    <script src="js/components/forms/BenefitsInput.js"></script>
+    <script src="js/components/forms/DeductionsInput.js"></script>
+    <script src="js/components/forms/OtherCLTComponents.js"></script>
+    <script src="js/components/integration/ApplyPaycheckModal.js"></script>
+    <script src="js/views/paycheck/PaycheckDashboard.js"></script>
+    <script src="js/views/paycheck/TemplateEditor.js"></script>
+    <script src="js/views/paycheck/TemplateList.js"></script>
+    <script src="js/views/paycheck/CalculationPreview.js"></script>
+    <script src="js/views/transactions/TransactionForm.js"></script>
+    <script src="js/api/paycheckRoutes.js"></script>
+    <script src="js/api/transactionRoutes.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
